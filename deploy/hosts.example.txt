@@ -1,0 +1,11 @@
+# nombre  ip_privada  ip_publica  roles
+# La IP pública solo se usa para entrar por SSH. Roles de cada VM, separados por coma:
+#   c1 c2 c3 = controladores (exactamente 3, cada uno en una VM distinta)
+#   n1..nK   = nodos de datos (mínimo 4 en total, máximo uno por VM)
+#   cli      = la VM desde la que se ejecuta el cliente y las pruebas
+# Con 4 VMs: tres llevan un controlador y un nodo de datos; la cuarta, un nodo de datos y el cliente.
+# (deploy/aws_crear_vms.sh genera este archivo solo; este es un ejemplo para hacerlo a mano.)
+vm1  10.0.1.11  3.80.0.11  c1,n1
+vm2  10.0.1.12  3.80.0.12  c2,n2
+vm3  10.0.1.13  3.80.0.13  c3,n3
+vm4  10.0.1.14  3.80.0.14  n4,cli

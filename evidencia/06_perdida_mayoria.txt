@@ -1,0 +1,24 @@
+# perdida_mayoria — 2026-11-08 17:12:23 -05
+
+-- esperando 5 s (estabilizar)
+## Se detienen 2 de los 3 controladores: se pierde la mayoría
+dfsha-c2
+dfsha-c3
+-- esperando 8 s (sin mayoría)
+## El sistema debe negarse a operar (503), no arriesgar inconsistencia:
+error 503 UNAVAILABLE: HTTPSConnectionPool(host='172.31.22.117', port=8001): Max retries exceeded with url: /v1/ls?path=%2F (Caused by NewConne
+código de salida: 1
+## Se restablece la mayoría
+dfsha-c2
+dfsha-c3
+  OK    escritura aceptada tras 0.6 s (intentos: 1)
+  hash original : 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  hash recuperado: 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  OK    archivo recuperado idéntico (0.9 s)
+## Los metadatos y los datos se conservaron:
+líder: https://172.31.23.151:8001  término Raft: 11
+  nodo n1: ALIVE    bloques=789  hace 1.8s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=86   hace 0.2s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=788  hace 0.8s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=789  hace 1.1s  https://172.31.19.21:9001
+bloques: 795  bajo-replicados: 0  perdidos: 0  archivos: 53

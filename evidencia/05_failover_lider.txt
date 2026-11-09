@@ -1,0 +1,21 @@
+# failover_lider — 2026-11-08 17:11:56 -05
+
+-- esperando 5 s (estabilizar)
+## El líder actual es c1 (172.31.23.151). Se detiene su contenedor (docker stop)
+dfsha-c1
+  OK    escritura aceptada tras 2.2 s (intentos: 1)
+líder: https://172.31.24.171:8001  término Raft: 10
+  nodo n1: ALIVE    bloques=789  hace 2.0s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=86   hace 0.4s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=788  hace 1.0s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=790  hace 1.2s  https://172.31.19.21:9001
+bloques: 795  bajo-replicados: 0  perdidos: 0  archivos: 53
+## c1 vuelve como seguidor (docker start)
+dfsha-c1
+-- esperando 10 s (reingreso)
+líder: https://172.31.24.171:8001  término Raft: 10
+  nodo n1: ALIVE    bloques=789  hace 0.5s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=86   hace 0.9s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=788  hace 1.5s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=789  hace 1.7s  https://172.31.19.21:9001
+bloques: 795  bajo-replicados: 0  perdidos: 0  archivos: 53

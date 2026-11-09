@@ -1,0 +1,16 @@
+{
+  "controllers": [
+    {"id": "c1", "raft": "10.0.1.11:4321", "api": "https://10.0.1.11:8001"},
+    {"id": "c2", "raft": "10.0.1.12:4321", "api": "https://10.0.1.12:8001"},
+    {"id": "c3", "raft": "10.0.1.13:4321", "api": "https://10.0.1.13:8001"}
+  ],
+  "replication": 3,
+  "min_ack": 2,
+  "block_size": 8388608,
+  "hb_interval": 2.0,
+  "suspect_after": 3,
+  "dead_after": 20.0,
+  "retention": 360.0,
+  "read_ttl": 300.0,
+  "lease": 30.0
+}

@@ -1,0 +1,31 @@
+# reposo_y_bit_alterado — 2026-11-08 17:13:20 -05
+
+## Cifrado en reposo: el texto plano no aparece en el disco de ningún nodo
+vm1: coincidencias de 'MARCADOR-SECRETO-DFSHA' en /var/lib/dfsha-data = 0
+vm2: coincidencias de 'MARCADOR-SECRETO-DFSHA' en /var/lib/dfsha-data = 0
+vm3: coincidencias de 'MARCADOR-SECRETO-DFSHA' en /var/lib/dfsha-data = 0
+vm4: coincidencias de 'MARCADOR-SECRETO-DFSHA' en /var/lib/dfsha-data = 0
+## Primeros bytes de un bloque guardado (cabecera + nonce + texto cifrado):
+/var/lib/dfsha-data/blocks/c1/c16dc239e9cc-1
+ 44 46 42 31 c6 87 63 2d 94 c8 7c c6 d5 90 51 00
+ 1d ce c2 c3 dc 06 28 41 c5 72 3e 40 81 74 5d bb
+ 58 2e 07 86
+
+## Bit alterado en el disco de un nodo
+bloque 89eadfdab2c7-0, réplica en el nodo n2: se altera 1 byte directamente en el disco
+/var/lib/dfsha-data/blocks/89/89eadfdab2c7-0
+byte 100 alterado
+## 6 lecturas seguidas: deben devolver siempre el archivo correcto (la copia mala se descarta y se repone)
+lectura 1:   OK    archivo recuperado idéntico (0.9 s)
+lectura 2:   OK    archivo recuperado idéntico (0.9 s)
+lectura 3:   OK    archivo recuperado idéntico (1.0 s)
+lectura 4:   OK    archivo recuperado idéntico (0.9 s)
+lectura 5:   OK    archivo recuperado idéntico (0.9 s)
+lectura 6:   OK    archivo recuperado idéntico (0.9 s)
+  OK    todos los bloques con 3 copias vivas (0.0 s)
+líder: https://172.31.23.151:8001  término Raft: 11
+  nodo n1: ALIVE    bloques=271  hace 1.9s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=58   hace 0.3s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=270  hace 0.9s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=275  hace 1.1s  https://172.31.19.21:9001
+bloques: 282  bajo-replicados: 0  perdidos: 0  archivos: 28

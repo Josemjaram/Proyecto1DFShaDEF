@@ -1,0 +1,15 @@
+# seguridad — 2026-11-08 17:13:17 -05
+
+  OK    sin token → 401
+  OK    token alterado → 401
+  OK    contraseña incorrecta → 401
+  OK    token propio → 200 (acceso autorizado)
+  OK    otro usuario pide el archivo ajeno → 403 FORBIDDEN
+  OK    nodo de datos sin token → 401
+  OK    token de otro usuario sobre un bloque ajeno → 403
+  OK    token de lectura no sirve para escribir → 403
+  OK    token de lectura propio → 200
+  OK    canal protegido: TLSv1.3 TLS_AES_256_GCM_SHA384
+  OK    una CA desconocida es rechazada
+  OK    HTTP en claro rechazado
+  (el cifrado en reposo se comprueba en los discos de los nodos con deploy/evidencia_aws.sh)

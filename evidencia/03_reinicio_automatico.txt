@@ -1,0 +1,17 @@
+# reinicio_automatico — 2026-11-08 17:11:16 -05
+
+## Caída abrupta de n2 (kill -9 al proceso del contenedor, como un fallo real): Docker debe levantarlo solo (--restart unless-stopped)
+antes: estado=running reinicios=0
+-- esperando 20 s (reinicio automático)
+estado=running reinicios=1 iniciado=2026-11-08T22:11:18.112954143Z
+dfsha-n2 Up 21 seconds
+líder: https://172.31.23.151:8001  término Raft: 8
+  nodo n1: ALIVE    bloques=789  hace 1.6s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=86   hace 2.0s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=789  hace 1.9s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=790  hace 0.8s  https://172.31.19.21:9001
+bloques: 795  bajo-replicados: 0  perdidos: 0  archivos: 53
+  hash original : 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  hash recuperado: 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  OK    archivo recuperado idéntico (0.9 s)
+  OK    Docker reinició n2 solo (reinicios >= 1)

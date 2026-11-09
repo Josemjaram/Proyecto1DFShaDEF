@@ -1,0 +1,38 @@
+# topologia — 2026-11-08 17:10:19 -05
+
+## Contenedores en cada VM (procesos separados en máquinas distintas)
+--- vm1 (172.31.23.151)  roles: c1,n1
+ip-172-31-23-151.ec2.internal
+NAMES      STATUS         IMAGE
+dfsha-n1   Up 5 minutes   dfsha
+dfsha-c1   Up 4 minutes   dfsha
+--- vm2 (172.31.22.117)  roles: c2,n2
+ip-172-31-22-117.ec2.internal
+NAMES      STATUS         IMAGE
+dfsha-n2   Up 5 seconds   dfsha
+dfsha-c2   Up 3 minutes   dfsha
+--- vm3 (172.31.24.171)  roles: c3,n3
+ip-172-31-24-171.ec2.internal
+NAMES      STATUS         IMAGE
+dfsha-n3   Up 6 minutes   dfsha
+dfsha-c3   Up 3 minutes   dfsha
+--- vm4 (172.31.19.21)  roles: n4,cli
+ip-172-31-19-21.ec2.internal
+NAMES      STATUS         IMAGE
+dfsha-n4   Up 6 minutes   dfsha
+
+## Comunicación real por la red privada: desde vm1 hacia los demás componentes (HTTPS con la CA propia)
+controlador c2 https://172.31.22.117:8001/health -> {"id":"c2","leader":false,"ready":true}
+controlador c3 https://172.31.24.171:8001/health -> {"id":"c3","leader":false,"ready":true}
+nodo de datos n1 https://172.31.23.151:9001/health -> {"node":"n1","status":"ok","free":15824973824}
+nodo de datos n2 https://172.31.22.117:9001/health -> {"node":"n2","status":"ok","free":18923368448}
+nodo de datos n3 https://172.31.24.171:9001/health -> {"node":"n3","status":"ok","free":15825207296}
+nodo de datos n4 https://172.31.19.21:9001/health -> {"node":"n4","status":"ok","free":15440916480}
+
+## Estado del clúster
+líder: https://172.31.23.151:8001  término Raft: 8
+  nodo n1: ALIVE    bloques=778  hace 0.4s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=21   hace 1.5s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=778  hace 0.5s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=778  hace 0.1s  https://172.31.19.21:9001
+bloques: 778  bajo-replicados: 0  perdidos: 0  archivos: 53
