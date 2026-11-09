@@ -1,0 +1,2 @@
+repair fallo 97bd468aa240-0 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='172.31.24.171', port=9001): Read timed out. (read timeout=3)"))
+repair fallo 0cec1dbb4f44-0 ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='172.31.24.171', port=9001): Read timed out. (read timeout=3)"))

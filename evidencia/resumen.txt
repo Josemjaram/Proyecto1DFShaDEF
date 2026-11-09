@@ -1,0 +1,13 @@
+00 topologia: 0
+01 carga_recuperacion: 0
+02 caida_nodo_datos: 0
+03 reinicio_automatico: 0
+04 replica_desconectada: 0
+05 failover_lider: 0
+06 perdida_mayoria: 0
+07 concurrencia: 0
+08 modificar_un_byte: 0
+09 seguridad: 0
+10 reposo_y_bit_alterado: 0
+11 rendimiento: 0
+12 logs: 0

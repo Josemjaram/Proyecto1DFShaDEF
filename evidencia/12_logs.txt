@@ -1,0 +1,9 @@
+# logs — 2026-11-08 17:16:34 -05
+
+log de c1 guardado
+log de c2 guardado
+log de c3 guardado
+log de n1 guardado
+log de n2 guardado
+log de n3 guardado
+log de n4 guardado

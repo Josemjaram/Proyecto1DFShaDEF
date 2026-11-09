@@ -1,0 +1,11 @@
+# rendimiento — 2026-11-08 17:14:51 -05
+
+## Rendimiento (64 MiB, 5 repeticiones; bloque de 1/4/8 MiB y 1/2/4 clientes)
+{'condicion': 'bloque=1MiB, 1 cliente', 'clientes': 1, 'bloque_MiB': 1, 'archivo_MiB': 64, 'repeticiones': 5, 'put_mediana_s': 1.71, 'put_p95_s': 2.76, 'get_mediana_s': 0.74, 'get_p95_s': 0.77, 'throughput_put_MiBs': 37.5, 'throughput_get_MiBs': 86.1, 'throughput_agregado_MiBs': 46.1}
+{'condicion': 'bloque=4MiB, 1 cliente', 'clientes': 1, 'bloque_MiB': 4, 'archivo_MiB': 64, 'repeticiones': 5, 'put_mediana_s': 1.09, 'put_p95_s': 1.23, 'get_mediana_s': 0.69, 'get_p95_s': 0.75, 'throughput_put_MiBs': 58.8, 'throughput_get_MiBs': 92.2, 'throughput_agregado_MiBs': 59.2}
+{'condicion': 'bloque=8MiB, 1 cliente', 'clientes': 1, 'bloque_MiB': 8, 'archivo_MiB': 64, 'repeticiones': 5, 'put_mediana_s': 1.23, 'put_p95_s': 1.25, 'get_mediana_s': 0.72, 'get_p95_s': 0.81, 'throughput_put_MiBs': 52.1, 'throughput_get_MiBs': 88.6, 'throughput_agregado_MiBs': 55.8}
+{'condicion': 'bloque=8MiB, 2 clientes', 'clientes': 2, 'bloque_MiB': 8, 'archivo_MiB': 64, 'repeticiones': 5, 'put_mediana_s': 2.0, 'put_p95_s': 2.01, 'get_mediana_s': 1.38, 'get_p95_s': 1.42, 'throughput_put_MiBs': 32.0, 'throughput_get_MiBs': 46.5, 'throughput_agregado_MiBs': 66.9}
+{'condicion': 'bloque=8MiB, 4 clientes', 'clientes': 4, 'bloque_MiB': 8, 'archivo_MiB': 64, 'repeticiones': 5, 'put_mediana_s': 3.55, 'put_p95_s': 4.87, 'get_mediana_s': 2.43, 'get_p95_s': 2.76, 'throughput_put_MiBs': 18.0, 'throughput_get_MiBs': 26.3, 'throughput_agregado_MiBs': 75.7}
+stat: mediana 1.6 ms, p95 2.9 ms
+CSV en results/aws_perf.csv
+CSV guardado en evidencia/aws_perf.csv
