@@ -1,5 +1,8 @@
 # DFSha — sistema de archivos distribuido (Proyecto 1, Sistemas Distribuidos 2026-2)
-
+Integrantes:
+David Pabón 
+Pablo Henao 
+José Jaramillo  
 Opción 1: cliente/servidor con servicio distribuido entre servidores (S2S) en red privada. Python 3.12 · FastAPI · Raft (PySyncObj).
 
 ```
