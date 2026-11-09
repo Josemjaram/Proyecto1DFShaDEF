@@ -1,0 +1,7 @@
+# Versiones con las que se ejecutó la suite completa (fijadas para que el despliegue en AWS sea reproducible)
+fastapi==0.162.0
+uvicorn[standard]==0.54.0
+requests==2.34.2
+cryptography==50.0.1
+argon2-cffi==25.1.0
+pysyncobj==0.3.17

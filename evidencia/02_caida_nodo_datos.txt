@@ -1,0 +1,25 @@
+# caida_nodo_datos — 2026-11-08 17:10:40 -05
+
+## Se detiene el nodo de datos n1 (docker stop dfsha-n1)
+dfsha-n1
+## Lectura y escritura con n1 caído
+  hash original : 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  hash recuperado: 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  OK    archivo recuperado idéntico (0.9 s)
+  OK    escritura aceptada tras 0.5 s (intentos: 1)
+-- esperando 25 s (n1 pasa a SUSPECT y luego DEAD)
+líder: https://172.31.23.151:8001  término Raft: 8
+  nodo n1: DEAD     bloques=789  hace 31.1s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=38   hace 3.6s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=789  hace 3.1s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=790  hace 3.6s  https://172.31.19.21:9001
+bloques: 795  bajo-replicados: 768  perdidos: 0  archivos: 53
+## n1 vuelve (docker start dfsha-n1)
+dfsha-n1
+  OK    todos los bloques con 3 copias vivas (0.0 s)
+líder: https://172.31.23.151:8001  término Raft: 8
+  nodo n1: ALIVE    bloques=789  hace 2.0s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=62   hace 0.1s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=789  hace 0.1s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=790  hace 1.2s  https://172.31.19.21:9001
+bloques: 795  bajo-replicados: 0  perdidos: 0  archivos: 53

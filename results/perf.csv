@@ -1,0 +1,6 @@
+condicion,clientes,bloque_MiB,archivo_MiB,repeticiones,put_mediana_s,put_p95_s,get_mediana_s,get_p95_s,throughput_put_MiBs,throughput_get_MiBs
+"bloque=1MiB, 1 cliente",1,1,24,3,1.09,1.2,0.24,0.24,22.0,101.3
+"bloque=4MiB, 1 cliente",1,4,24,3,0.74,0.77,0.23,0.26,32.4,105.5
+"bloque=8MiB, 1 cliente",1,8,24,3,0.71,0.73,0.28,0.28,33.8,86.2
+"bloque=4MiB, 2 clientes",2,4,24,3,1.05,1.19,0.45,0.48,22.8,53.8
+"bloque=4MiB, 4 clientes",4,4,24,3,1.97,2.16,0.75,0.92,12.2,32.1

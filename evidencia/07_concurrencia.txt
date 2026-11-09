@@ -1,0 +1,5 @@
+# concurrencia — 2026-11-08 17:13:12 -05
+
+  OK    segundo escritor sobre el mismo archivo: 423 LOCKED (bloqueo exclusivo)
+  OK    el primer escritor publicó su versión completa, sin mezcla de bytes
+  OK    terminado el primero, el segundo ya puede escribir

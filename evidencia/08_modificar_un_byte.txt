@@ -1,0 +1,6 @@
+# modificar_un_byte — 2026-11-08 17:13:15 -05
+
+  OK    cambiar 1 byte reenvió solo el bloque [1] de 4; los otros 3 se comparten
+  OK    el contenido leído coincide con el esperado
+  OK    el tamaño del archivo no cambia
+  OK    modificar fuera del archivo: 416 RANGE_OUT_OF_FILE (para extender se usa anexar)

@@ -1,0 +1,17 @@
+# replica_desconectada — 2026-11-08 17:11:43 -05
+
+## Réplica desconectada: se congela n3 (docker pause) durante una escritura
+dfsha-n3
+  OK    escritura aceptada tras 1.6 s (intentos: 1)
+  hash original : 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  hash recuperado: 9651dcdc87f45015702c04ff7dc8685387af2b90b1d7b56ba8059c94b385e78d
+  OK    archivo recuperado idéntico (0.9 s)
+## n3 se reconecta (docker unpause)
+dfsha-n3
+  OK    todos los bloques con 3 copias vivas (0.0 s)
+líder: https://172.31.23.151:8001  término Raft: 8
+  nodo n1: ALIVE    bloques=789  hace 1.4s  https://172.31.23.151:9001
+  nodo n2: ALIVE    bloques=86   hace 1.8s  https://172.31.22.117:9001
+  nodo n3: ALIVE    bloques=789  hace 0.4s  https://172.31.24.171:9001
+  nodo n4: ALIVE    bloques=789  hace 0.6s  https://172.31.19.21:9001
+bloques: 795  bajo-replicados: 0  perdidos: 0  archivos: 53

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+certs/
+*.key
+*.pem
+env
+.env
+/tmp/
+
+deploy/hosts.txt
+deploy/*.generated.*
+deploy/logs/
+secrets*.env
